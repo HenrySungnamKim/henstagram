@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjus: 100%;
+	color: #58666e;
+	background-color: #fafafa;
+}
+
+.joinContainer {
+	display: flex;
+}
+
+.joinForm {
+	display: inline-block;
+	margin: 5.6rem auto;
+	padding : 20px;
+	text-align: center;
+	width: 348px;
+	height: 540px;
+	background-color: #fff;
+	border: 1px solid #dee5e7;
+}
+
+.joinHeader {
+	padding: 20px;
+}
+
+.joinHeader h5 {
+	padding: 15px 15px 0px 15px;
+}
+
+.facebookButton {
+	font-size: 14px;
+	padding:10px;
+	width:230px;
+	border: 1px solid #dee5e7;
+	border-radius:1rem;
+	margin-bottom:15px;
+}
+.else{
+	font-weight:600;
+	margin-bottom:15px;
+	display:flex;
+
+}
+.else-group{
+	display:inline-block;
+	margin: 0 auto;
+}
+.else-line{
+	min-width:120px;
+	margin-bottom:8px;
+	border-bottom:1px solid #dee5e7;
+}
+.joinControl{
+	font-size:13px;
+	padding:5px;
+	margin-bottom:15px;
+	width: 280px;
+}
+.joinButton{
+	font-size: 14px;
+	padding:10px;
+	width:180px;
+	border: 1px solid #dee5e7;
+	border-radius:1rem;
+	margin-bottom:15px;
+}
+footer {
+	text-align: center;
+	height: 60px;
+	width: 100%;
+	padding: 0 25px;
+	line-height: 60px;
+	color: #8a8c8f;
+	border-top: 1px solid #dee5e7;
+	background-color: #f2f2f2;
+}
