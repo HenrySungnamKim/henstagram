@@ -1,0 +1,57 @@
+#postsContainer {
+	width: 600px;
+	margin: 10% auto;
+}
+
+#postsContainer section {
+	margin-bottom: 20px;
+}
+
+article {
+	border-radius: 1rem;
+	text-align: center;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+	margin-bottom: 30px;
+	background-color: #fff;
+	padding: 40px;
+}
+
+.articleHeader {
+	text-align: left;
+}
+
+.articleHeader>h1 {
+	display: inline-block;
+}
+
+.articleBody {
+	border-bottom: 1px solid #dee5e7;
+	text-align: center;
+}
+
+.articleBody p {
+	padding-bottom: 8px;
+	text-align: left;
+}
+
+.articleHeader>img {
+	display: inline-block;
+}
+
+.articleComment {
+	font-size: 12px;
+	text-align: left;
+}
+
+.articleComment {
+	padding: 5px 15px 5px 5px;
+}
+
+.commentControl {
+	margin-top: 5px;
+	font-size: 14px;
+	padding: 3px;
+	min-width: 250px;
+	width: 500px;
+	font-size: 14px;
+}

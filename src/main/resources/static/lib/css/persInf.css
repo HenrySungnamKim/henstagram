@@ -1,0 +1,96 @@
+#persInfContainer {
+	margin: 10% 15%;
+}
+
+.persInfHeaderContainer {
+	display: flex;
+	width: 780px;
+	padding: 30px 50px;
+	margin: auto; text-align : center;
+	border-bottom: 1px solid #dee5e7;
+	text-align: center;
+}
+
+.persInfImage {
+	display: inline-block;
+	padding: 20px;
+	margin: auto auto;
+}
+
+.persInfSection {
+	display: inline-block;
+	padding: 10px;
+	margin: auto auto;
+}
+
+.persInfHeader {
+	display: flex;
+}
+
+.persInfHeaderButton {
+	width: 60px;
+	height: 24px;
+	margin: auto 7px auto 3px;
+	border-radius: 1rem;
+}
+
+.persInfBody ul {
+	display: inline-block;
+	list-style: none;
+}
+
+.persInfBody li {
+	margin-right: 10px;
+	float: left;
+}
+
+.persInfBody h3 {
+	text-align: left;
+}
+
+.persInfBody h4 {
+	text-align: left;
+}
+
+.persInfFollwers {
+	padding-top: 5px;
+	text-align: left;
+}
+
+.persInfFollwers strong {
+	font-size: 13px;
+	font-style: italic;
+	padding-right: 4px;
+}
+
+.persArticlesContainer {
+	width: 90%;
+	margin: auto;
+}
+
+.persArticleHeader {
+	text-align: center;
+}
+
+.persArticleHeader h5 {
+	padding: 5px;
+}
+
+.articlesList {
+	display: flex;
+	margin:20px 0;
+	
+}
+
+.articleBody {
+	margin:0 auto;
+	max-width: 280px;
+	max-height: 280px;
+	display: inline-block;
+}
+
+
+.imageSizing {
+	max-width: 100%;
+	height: 100%;
+}

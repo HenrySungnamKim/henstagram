@@ -1,0 +1,60 @@
+<html>
+<head>
+{{> /include/header}}
+<link rel="stylesheet" href="/lib/css/loginForm.css">
+</head>
+<body>
+	<div id="loginContainer">
+		<div class="loginIphone">
+			<img src="/lib/img/loginIphone.png" height="545px" width="280px">
+			<section></section>
+		</div>
+		<div class="loginFormContainer">
+			<div class="loginForm">
+				<form action="/loginUser" method="post">
+					<div class="loginHeader">
+						<img src="/lib/img/henstagram.png" height="40px">
+					</div>
+					<div class="loginContents">
+						<div class="form-group">
+							<input type="text" name="userID" class="loginControl"
+								placeholder="ID 입력" required="true">
+						</div>
+						<div class="form-group">
+							<input type="password" name="userPW" class="loginControl"
+								placeholder="PW 입력" required="true">
+						</div>
+						<button class="loginButton" type="submit">로그인</button>
+						<div class="else">
+							<div class="else-group else-line"></div>
+							<div class="else-group">또는</div>
+							<div class="else-group else-line"></div>
+						</div>
+						<div class="facebookLogin">
+							<button class="facebookButton" type="button">
+								<span><img src="/lib/img/facebook.png" height="16px"></span>
+								Facebook으로 로그인
+							</button>
+						</div>
+						<div class="forgetPassword">
+							<a href="/userPWForget">비밀번호를 잃어버리셨나요?</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="newJoin">
+				<p>
+					계정이 없으신가요? <a href="/joinForm">가입하기</a>
+				</p>
+			</div>
+			<div class="appDownload">
+				<p>앱을 다운로드 하세요.</p>
+				<a href="#"><img src="/lib/img/applestore.png" height="40px"></a>
+				<a href="#"><img src="/lib/img/googlestore.png" height="40px"></a>
+			</div>
+		</div>
+	</div>
+	{{> /include/footer}}
+</body>
+
+</html>

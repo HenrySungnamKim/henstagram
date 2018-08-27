@@ -1,0 +1,50 @@
+<html>
+<head>
+{{> /include/header}}
+<link rel="stylesheet" href="/lib/css/main.css">
+</head>
+<body>
+	{{> /include/nav}}
+	<div id="postsContainer">
+		<section>
+			<article>
+				<div class="articleHeader">
+					<img alt="profileImage" src="/lib/img/profile.png" height="18px">
+					<h1>아이디</h1>
+				</div>
+				<div class="articleBody">
+					<img alt="article" src="/lib/img/article1.png" height="330px">
+					<p>좋아요 댓글보기</p>
+					<p>2018.08.23 #바다#LifeisGood</p>
+					<p>12시간 전</p>
+				</div>
+				<div class="articleComment">
+					<form action="/commentArticle" method="post"></form>
+					<input type="text" name="userComment" class="commentControl"
+						placeholder="댓글 달기..." required="true">
+				</div>
+			</article>
+			<article>
+				<div class="articleHeader">
+					<img alt="profileImage" src="/lib/img/profile.png" height="18px">
+					<h1>아이디</h1>
+				</div>
+				<div class="articleBody">
+					<img alt="article" src="/lib/img/article1.png" height="330px">
+					<p>좋아요 댓글보기</p>
+					<p>2018.08.23 #바다#LifeisGood</p>
+					<p>12시간 전</p>
+				</div>
+				<div class="articleComment">
+					<form action="/commentArticle" method="post"></form>
+					<input type="text" name="userComment" class="commentControl"
+						placeholder="댓글 달기..." required="true">
+				</div>
+			</article>
+		</section>
+		<aside></aside>
+	</div>
+	{{> /include/footer}}
+</body>
+
+</html>
