@@ -1,3 +1,4 @@
-#Spring boot project Henstagram
-##Instagram styled web project.
+# Spring boot project Henstagram
+
+## Instagram styled web project.
  
