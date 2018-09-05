@@ -1,0 +1,50 @@
+<html>
+<head>
+{{> /include/header}}
+<link rel="stylesheet" href="/lib/css/updateUserForm.css">
+</head>
+<body>
+	{{> /include/nav}}
+	<div id="updateFormContainer">
+		<article class="updateForm">
+			{{#sessionedUser}}
+			<form action="/user/{{id}}" method="post">
+				<input type="hidden" name="_method" value="put" />
+				<div class="updateHeader">
+					<img src="/lib/img/profile/profile.png" height="40px">
+					<h4>{{userId}}</h4>
+				</div>
+				<a href=#>프로필 사진 바꾸기</a>
+				<div class="updateContents">
+					<div class="form-group">
+						<label for="userName">이름</label> <input type="text"
+							name="userName" class="formControl" placeholder="{{userName}}"
+							required="true">
+					</div>
+					<div class="form-group">
+						<label for="userId">아이디</label> <input type="text" name="userId"
+							class="formControl" placeholder="{{userId}}" required="true">
+					</div>
+					<div class="form-group">
+						<label for="userEmail">이메일</label> <input type="email"
+							name="userEmail" class="formControl" placeholder="{{userEmail}}"
+							required="true">
+					</div>
+					<div class="form-group">
+						<label for="userPassword">비밀번호</label> <input type="password"
+							name="userPassword" class="formControl" placeholder="..."
+							required="false">
+					</div>
+					<div class="form-group">
+						<label for="userIntro">소개</label> <input type="text"
+							name="userIntro" class="formControl" placeholder="{{userIntro}}">
+					</div>
+					<button class="updateButton" type="submit">제출</button>
+				</div>
+			</form>
+		</article>
+		{{/sessionedUser}}
+	</div>
+	{{> /include/footer}}
+</body>
+</html>

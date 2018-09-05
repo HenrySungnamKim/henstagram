@@ -42,11 +42,5 @@ public class WebController {
 		return "/personalInfo";
 	}
 
-	@GetMapping("/questions")
-	public String about(HttpSession session) {
-		if (!HttpSessionUtils.isLoginUser(session)) {
-			return "/user/loginForm";
-		}
-		return "/questions";
-	}
+	
 }

@@ -6,24 +6,40 @@
 <body>
 	{{> /include/nav}}
 	<div id="persInfContainer">
+		{{#sessionedUser}}
 		<div class="persInfHeaderContainer">
 			<div class="persInfImage">
-				<img src="lib/img/profile/profile.png" height="170px">
+				<img src="/lib/img/profile/profile.png" height="170px">
 			</div>
 			<section class="persInfSection">
 				<div class="persInfHeader">
-					<h2>henry_kkk</h2>
-					<button class="persInfHeaderButton">팔로잉</button>
-					<button class="persInfHeaderButton">...</button>
+					<h2>{{userId}}</h2>
+					<button class="persInfHeaderButton"
+						onclick="location.href='/user/updateForm/{{userId}}';">프로필
+						편집</button>
+					<!-- Modal Section -->
+					<button id="modalButton">
+						<img src="/lib/img/preference.png" height="24px">
+					</button>
+					<div id="myModal" class="modal">
+						<!-- Modal content -->
+						<div class="modal-content">
+							<!-- <span class="close">&times;</span> -->
+							<ul>
+								<li><a href="/user/logout">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Modal Finished -->
 				</div>
 				<div class="persInfBody">
 					<ul>
 						<li>게시물 <span><strong>232</strong></span></li>
-						<li>팔로워 <span><strong>100</strong></span></li>
-						<li>팔로잉 <span><strong>112</strong></span></li>
+						<li>팔로워 <span><strong>22</strong></span></li>
+						<li>팔로잉 <span><strong>444</strong></span></li>
 					</ul>
-					<h3>김성남</h3>
-					<h4>자기소개입니다.</h4>
+					<h3>{{userName}}</h3>
+					<h4>{{userIntro}}</h4>
 				</div>
 				<div class="persInfFollwers">
 					<h5>
@@ -31,6 +47,7 @@
 					</h5>
 				</div>
 			</section>
+
 		</div>
 		<div class="persArticlesContainer">
 			<div class="persArticleHeader">
@@ -40,21 +57,21 @@
 				<div class="articleBody">
 					<a>
 						<div class="articleBodyImage">
-							<img class="imageSizing" src="lib/img/article/article1.jpg">
+							<img class="imageSizing" src="/lib/img/article/article1.jpg">
 						</div>
 					</a>
 				</div>
 				<div class="articleBody">
 					<a>
 						<div class="articleBodyImage">
-							<img class="imageSizing" src="lib/img/article/article1.jpg">
+							<img class="imageSizing" src="/lib/img/article/article1.jpg">
 						</div>
 					</a>
 				</div>
 				<div class="articleBody">
 					<a>
 						<div class="articleBodyImage">
-							<img class="imageSizing" src="lib/img/article/article1.jpg">
+							<img class="imageSizing" src="/lib/img/article/article1.jpg">
 						</div>
 					</a>
 				</div>
@@ -63,27 +80,29 @@
 				<div class="articleBody">
 					<a>
 						<div class="articleBodyImage">
-							<img class="imageSizing" src="lib/img/article/article1.jpg">
+							<img class="imageSizing" src="/lib/img/article/article1.jpg">
 						</div>
 					</a>
 				</div>
 				<div class="articleBody">
 					<a>
 						<div class="articleBodyImage">
-							<img class="imageSizing" src="lib/img/article/article1.jpg">
+							<img class="imageSizing" src="/lib/img/article/article1.jpg">
 						</div>
 					</a>
 				</div>
 				<div class="articleBody">
 					<a>
 						<div class="articleBodyImage">
-							<img class="imageSizing" src="lib/img/article/article1.jpg">
+							<img class="imageSizing" src="/lib/img/article/article1.jpg">
 						</div>
 					</a>
 				</div>
 			</div>
 		</div>
+		{{/sessionedUser}}
 	</div>
+	<script src="/lib/js/modalControl.js"></script>
 	{{> /include/footer}}
 </body>
 

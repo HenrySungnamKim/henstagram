@@ -6,7 +6,8 @@
 	display: flex;
 	width: 780px;
 	padding: 30px 50px;
-	margin: auto; text-align : center;
+	margin: auto;
+	text-align: center;
 	border-bottom: 1px solid #dee5e7;
 	text-align: center;
 }
@@ -28,10 +29,17 @@
 }
 
 .persInfHeaderButton {
-	width: 60px;
-	height: 24px;
+	font-size: 12px;
+	font-weight:600;
+	border:1px solid #58666e;
+	background-color:#fff;
+	padding: 5px;
 	margin: auto 7px auto 3px;
-	border-radius: 1rem;
+	border-radius: 4px;outline:none;
+}
+#prefButton{
+	outline:none;
+	background-color:#fafafa;
 }
 
 .persInfBody ul {
@@ -78,17 +86,15 @@
 
 .articlesList {
 	display: flex;
-	margin:20px 0;
-	
+	margin: 20px 0;
 }
 
 .articleBody {
-	margin:0 auto;
+	margin: 0 auto;
 	max-width: 280px;
 	max-height: 280px;
 	display: inline-block;
 }
-
 
 .imageSizing {
 	max-width: 100%;

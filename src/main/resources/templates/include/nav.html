@@ -5,6 +5,7 @@
 				height="36px">
 			</a>
 		</div>
+		{{#sessionedUser}}
 		<div class="navSearchBar">
 			<input class="navSearch" type="text" autocapitalize="none"
 				placeholder="검색" value=""> <span class="navSearchIcon"><a
@@ -13,14 +14,18 @@
 		</div>
 		<div class="iconsBar">
 			<nav>
+				
 				<ul class="nav-items">
-					<li><a href="/expl	ore"><img src="/lib/img/navigation.png"
+					<li><a href="/explore"><img src="/lib/img/navigation.png"
 							height="36px"></a></li>
 					<li><a href="/hearts"><img src="/lib/img/hearts.png"
-							height="36px"></a></li>
-					<li><a href="/persInf"><img src="/lib/img/profile.png"
-							height="36px"></a></li>
+							height="36px"></a></li> 
+					
+					<li><a href="/persInf/{{id}}"><img
+							src="/lib/img/profile.png" height="36px"></a></li>
+					{{/sessionedUser}}
 				</ul>
+
 			</nav>
 		</div>
 	</div>
