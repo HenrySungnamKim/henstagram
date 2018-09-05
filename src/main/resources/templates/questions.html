@@ -1,0 +1,75 @@
+<html>
+<head>
+{{> /include/header}}
+<link rel="stylesheet" href="/lib/css/question.css">
+</head>
+<body>
+	{{> /include/nav}} {{#sessionedUser}}
+	<div id="questionBoardContainer">
+		<h1>Henstagram에 질문하기</h1>
+		<div class="questionTableContainer">
+			<table class="questionTable">
+				<thead class="questionHeader">
+					<tr class="border">
+						<th>번호</th>
+						<th>제목</th>
+						<th>작성자</th>
+						<th>최종수정일</th>
+					</tr>
+				</thead>
+				{{#questionsPage}}
+				<tbody id="questionBody">
+					<tr>
+						<td><a href="/questions/show/{{id}}">{{id}}</a></td>
+						<td><a href="/questions/show/{{id}}">{{title}}</a></td>
+						<td><a href="/questions/show/{{id}}">{{writer.userName}}</a></td>
+						<td>{{createdDate}}</td>
+					</tr>
+					{{/questionsPage}}
+				</tbody>
+			</table>
+			<ul class="pager">
+				{{^questionPage.first}}
+					<li id="firstPageButton"><a href="?page=0">처음</a></li>
+					<li id="beforePageButton"><a href="?page={{prevPage}}">이전</a></li>
+					<li id="nextPageButton"><a href="?page={{nextPage}}">다음</a></li>
+				{{/questionPage.first}}
+			</ul>
+			<div class="questionLink">
+				<button class="writeButton" id="modalButton">글 쓰기</button>
+			</div>
+		</div>
+		<!-- Modal Section -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modalBody">
+					<form method="post" action="/questions/{{id}}">
+						<div class="formGroup">
+							<label class="modalLabel" for="title">제목</label> <input
+								type="text" class="formControl" name="title"
+								placeholder="제목을 입력하세요">
+						</div>
+						<div class="formGroup">
+							<label class="modalLabel" for="contents"> 내용 </label>
+							<textarea class="formControl modalText" name="contents"
+								placeholder="내용을 입력하세요"></textarea>
+						</div>
+						<div class="modalButtons">
+							<button id="write" class="writeButton" type="submit">작성</button>
+							<button class="writeButton" type="reset">초기화</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Modal Finished -->
+		{{/sessionedUser}}
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/lib/js/questionsLoad.js"></script>
+	<script src="/lib/js/modalControl.js"></script>
+	{{> /include/footer}}
+</body>
+</html>

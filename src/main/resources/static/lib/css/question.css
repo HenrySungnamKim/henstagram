@@ -1,0 +1,103 @@
+#questionBoardContainer {
+	margin: 10% 15%;
+}
+
+.questionTableContainer {
+	padding:20px;
+	height:600px;
+}
+
+.questionTable {
+	background-color: #fefefe;
+	width: 80%;
+	text-align: center;	
+	margin: 0 auto;
+	font-size: 18px;
+	border-collapse: collapse;
+}
+
+.questionTable * {
+	border: 1px solid #58666e;
+}
+th{
+	padding: 5px;
+}
+td {
+	border: 1px solid #444444;
+	padding: 10px;
+}
+
+.questionHeader {
+	margin-bottom: 30px;
+}
+
+#questionBody {
+	font-size: 16px;
+	border: 1px solid #58666e;
+}
+#questionBody a{
+	border:1px solid #fefefe;
+}
+.questionLink {
+	width: 80%;
+	margin: 20px auto 0 auto;
+	text-align: right;
+}
+
+.writeButton {
+	color: #fff;
+	padding: 5px;
+	font-weight: 600;
+	font-size: 15px;
+	background-color: #3897f0;
+	border-radius: 4px;
+}
+.pager{
+	
+	padding-top:15px;
+	text-align:center;
+}
+.pager li{
+	
+	display:inline-block;
+	padding:5 10 5 10px;
+	margin-right:5px;
+	font-weight: 600;
+	background-color:#3897f0;
+	border-radius:4px;
+	list-style:none;
+}
+.pager a{
+	text-decoration:none;
+	color: #fff;
+	
+}
+
+<!-- modal -->
+
+.formGroup{
+	
+}
+.modalTitle{
+	
+}
+.modalContents{
+	margin:5px;
+}
+.modalLabel{
+	font-size:16px;
+	font-weight:600;
+}
+.formControl{
+	width:100%;
+	font-size:14px;
+	padding:10px;
+}
+.modalButtons{
+	margin-top:13px;
+	margin-right:5px;
+	text-align:right;
+}
+.modalText{
+	height:300px;
+}

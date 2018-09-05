@@ -1,0 +1,59 @@
+<html>
+<head>
+{{> /include/header}}
+<link rel="stylesheet" href="/lib/css/showQuestions.css">
+</head>
+<body>
+	{{> /include/nav}}
+	<div id="showQuestionContainer">
+		{{#sessionedUser}}
+		<div class="showQuestionMain">
+			<table class="showQuestionTable">
+				{{#questionsDetail}}
+				<thead>
+					<tr class="background-dark">
+						<th class="background-dark">{{title}}</th>
+					</tr>
+				</thead>
+				<tbody id="showQuestionBody">
+					<tr>
+					<td>{{contents}}</td>
+	
+					</tr>
+				</tbody>
+				{{/questionsDetail}}
+			</table>
+			<div class="answerContainer">
+				<div class="answerHeader">
+					<div class="answerHeaderleft">
+						<h4>아이디.</h4>
+					</div>
+					<div class="answerHeaderRight">
+						<h5>2018.10.2 19:39:21</h5>
+					</div>
+
+				</div>
+				<div class="answerBody">
+					<p>이건 저렇고 저건 저런거 같은데요?</p>
+				</div>
+			</div>
+			<div class="answerContainer">
+				<div class="answerHeader">
+					<div class="answerHeaderleft">
+						<h4>아이디.</h4>
+					</div>
+					<div class="answerHeaderRight">
+						<h5>2018.10.2 19:39:21</h5>
+					</div>
+				</div>
+				<div class="answerBody">
+					<p>이건 저렇고 저건 저런거 같은데요?</p>
+				</div>
+			</div>
+		</div>
+		{{/sessionedUser}}
+	</div>
+	{{> /include/footer}}
+</body>
+
+</html>
