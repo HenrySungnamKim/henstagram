@@ -17,12 +17,27 @@
 				</thead>
 				<tbody id="showQuestionBody">
 					<tr>
-					<td>{{contents}}</td>
-	
+						<td>{{contents}}</td>
 					</tr>
 				</tbody>
-				{{/questionsDetail}}
 			</table>
+			<div class="buttonsContainer">
+				<ul>
+					<li>
+						<button class="questionsButton" onclick="location.href='/questions/updateForm/{{id}}'">수정</button>
+					</li>
+					<li>
+						<form action="/questions/{{id}}" method="post">
+							<input type="hidden" name="_method" value="DELETE">
+							<button class="questionsButton" type="submit">삭제</button>
+						</form>
+					</li>
+					<li>
+						<button class="questionsButton" onclick="location.href='/answer/{{id}}'">댓글 작성</button>
+					</li>
+				</ul>
+			</div>
+			{{/questionsDetail}}
 			<div class="answerContainer">
 				<div class="answerHeader">
 					<div class="answerHeaderleft">
@@ -32,19 +47,6 @@
 						<h5>2018.10.2 19:39:21</h5>
 					</div>
 
-				</div>
-				<div class="answerBody">
-					<p>이건 저렇고 저건 저런거 같은데요?</p>
-				</div>
-			</div>
-			<div class="answerContainer">
-				<div class="answerHeader">
-					<div class="answerHeaderleft">
-						<h4>아이디.</h4>
-					</div>
-					<div class="answerHeaderRight">
-						<h5>2018.10.2 19:39:21</h5>
-					</div>
 				</div>
 				<div class="answerBody">
 					<p>이건 저렇고 저건 저런거 같은데요?</p>

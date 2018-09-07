@@ -23,16 +23,16 @@
 						<td><a href="/questions/show/{{id}}">{{id}}</a></td>
 						<td><a href="/questions/show/{{id}}">{{title}}</a></td>
 						<td><a href="/questions/show/{{id}}">{{writer.userName}}</a></td>
-						<td>{{createdDate}}</td>
+						<td>{{createDate}}</td>
 					</tr>
 					{{/questionsPage}}
 				</tbody>
 			</table>
 			<ul class="pager">
 				{{^questionPage.first}}
-					<li id="firstPageButton"><a href="?page=0">처음</a></li>
-					<li id="beforePageButton"><a href="?page={{prevPage}}">이전</a></li>
-					<li id="nextPageButton"><a href="?page={{nextPage}}">다음</a></li>
+				<li id="firstPageButton"><a href="?page=0">처음</a></li>
+				<li id="beforePageButton"><a href="?page={{prevPage}}">이전</a></li>
+				<li id="nextPageButton"><a href="?page={{nextPage}}">다음</a></li>
 				{{/questionPage.first}}
 			</ul>
 			<div class="questionLink">

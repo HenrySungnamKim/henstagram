@@ -1,0 +1,35 @@
+#updateFormContainer{
+	margin : 17% 20%;
+}
+
+.formContainer{
+	padding:20px;
+	border-radius:4px;
+	background-color:#fefefe;
+	
+	
+}
+.formGroup{
+	padding:20px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+.formText{
+	font-size:13px;
+	height:100px;
+	width: 400px;
+}
+.buttonsContainer{
+	margin-top:20px;
+	padding:20px;
+}
+.formContainer button{
+	font-size:13px;
+	
+	padding:5 10 5 10px;
+	color:#fff;
+	font-weight: 600;
+	border-radius:4px;	
+	background-color:#3897f0;
+}

@@ -13,7 +13,6 @@
 	text-align: center;
 	margin: 0 auto;
 	font-size: 22px;
-	border-bottom: 1px solid #dee5e7;
 	border-collapse: collapse;
 }
 
@@ -32,7 +31,29 @@
 #showQuestionBody td {
 	height: 300px;
 }
-
+.buttonsContainer{
+	background-color: #fefefe;
+}
+.buttonsContainer ul{
+	padding-top:10px;
+	padding-bottom:10px;
+	border-bottom:1px solid #dee5e7;
+	text-align:right;
+}
+.buttonsContainer li{
+	margin-right:10px;
+	display:inline-block;
+	
+}
+.questionsButton{
+	font-size:13px;
+	
+	padding:5 10 5 10px;
+	color:#fff;
+	font-weight: 600;
+	border-radius:4px;	
+	background-color:#3897f0;
+}
 .answerContainer {
 	padding:10px;
 	border-bottom: 1px solid #dee5e7;

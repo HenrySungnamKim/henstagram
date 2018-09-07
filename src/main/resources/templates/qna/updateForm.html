@@ -1,0 +1,40 @@
+<html>
+<head>
+{{> /include/header}}
+<link rel="stylesheet" href="/lib/css/questionsUpdateForm.css">
+</head>
+<body>
+	{{> /include/nav}} {{#sessionedUser}}
+	<div id="updateFormContainer">
+		{{#questionsDetail}}
+		<h2>질문 수정하기</h2>
+		<div class="formContainer">
+			<form action="/questions/{{id}}" method="post">
+				<input type="hidden" name="_method" value="PUT">
+				<div class="formGroup">
+					<h3>제목</h3>
+					<textarea class="formControl formText" name="title"
+						placeholder="{{title}}">
+					</textarea>
+				</div>
+				<div class="formGroup">
+					<h3>내용</h3>
+					<textarea class="formControl formText" name="contents"
+						placeholder="{{contents}}"></textarea>
+				</div>
+				<div class="buttonsContainer">
+					<button type="submit">수정</button>
+					<form action="/questions/{{id}}" method="post">
+						<input type="hidden" name="_method" value="DELETE">
+						<button class="questionsButton" type="submit">삭제</button>
+					</form>
+				</div>
+
+				{{/questionsDetail}}
+			</form>
+		</div>
+	</div>
+	{{/sessionedUser}} {{> /include/footer}}
+</body>
+
+</html>
