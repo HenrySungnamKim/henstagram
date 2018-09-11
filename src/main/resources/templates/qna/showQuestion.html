@@ -6,10 +6,10 @@
 <body>
 	{{> /include/nav}}
 	<div id="showQuestionContainer">
-		{{#sessionedUser}}
+		{{#sessionedUser}} {{#questionsDetail}}
 		<div class="showQuestionMain">
 			<table class="showQuestionTable">
-				{{#questionsDetail}}
+
 				<thead>
 					<tr class="background-dark">
 						<th class="background-dark">{{title}}</th>
@@ -23,8 +23,10 @@
 			</table>
 			<div class="buttonsContainer">
 				<ul>
+
 					<li>
-						<button class="questionsButton" onclick="location.href='/questions/updateForm/{{id}}'">수정</button>
+						<button class="questionsButton"
+							onclick="location.href='/questions/updateForm/{{id}}'">수정</button>
 					</li>
 					<li>
 						<form action="/questions/{{id}}" method="post">
@@ -32,30 +34,51 @@
 							<button class="questionsButton" type="submit">삭제</button>
 						</form>
 					</li>
-					<li>
-						<button class="questionsButton" onclick="location.href='/answer/{{id}}'">댓글 작성</button>
-					</li>
 				</ul>
 			</div>
-			{{/questionsDetail}}
-			<div class="answerContainer">
+			<div class="answerWriteContainer">
+				<form class="answer-write" method="post" action="/api/answer/{{id}}">
+					<div class="form-group">
+						<textarea class="answerWrite" placeholder="Update your status"
+							name="contents"></textarea>
+						<input type="submit" class="answer-button" value="답변하기" />
+					</div>
+				</form>
+			</div>
+			<!-- Ajax통신 결과 -->
+			<div id="answerContainer">
+			{{#answers}}
 				<div class="answerHeader">
-					<div class="answerHeaderleft">
-						<h4>아이디.</h4>
+					<div class='answerHeaderleft'>
+						<h4>{{writer.userId}}</h4>
 					</div>
 					<div class="answerHeaderRight">
-						<h5>2018.10.2 19:39:21</h5>
+						<h5>{{createDate}}</h5>
 					</div>
-
 				</div>
 				<div class="answerBody">
-					<p>이건 저렇고 저건 저런거 같은데요?</p>
+					<p>{{contents}}</p>
 				</div>
+				{{/answers}}
 			</div>
+			
 		</div>
-		{{/sessionedUser}}
 	</div>
 	{{> /include/footer}}
+	<script type="text/template" id="answerTemplate">
+	<div class="answerHeader">
+		<div class='answerHeaderleft'>
+			<h4>{0}</h4>
+		</div>
+		<div class="answerHeaderRight">
+			<h5>{1}</h5>
+		</div>
+	</div>
+	<div class="answerBody">
+		<p>{2}</p>
+	</div>
+	</script>
+	<script src="/lib/js/answerApi.js"></script>
+	{{/questionsDetail}} {{/sessionedUser}}
 </body>
-
 </html>
