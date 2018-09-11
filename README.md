@@ -19,16 +19,13 @@
 
 - Ajax (기능 작업중) ⏳
 
-  메인페이지 검색 : 회원 리스트 출력
+  메인 페이지 검색 : 회원 리스트 출력
 
-  웹 소켓 : 실시간 채팅
+  웹 소켓 : 실시간 채팅 (추가 예정)
 
-  계층형 댓글 처리
-
-- 바닐라 자바스크립트 사용 (Jquery사용 x)
 - DB 관계 설계
 
-  JPA Entity, JPA Repository, Follow Relation
+  팔로우/팔로워(ManyToMany), 좋아요(ManyToMany), 질문/답변(OneToMany,ManyToOne) 관계 설정
 
 ## 이 기술을 사용한 이유와 장/단점
 
@@ -58,36 +55,26 @@
 
 - h2 DB
 
-  서비스 출시 전 test용 DB로 사용하기 좋다. 하지만 아직 TDD를 적용하기엔 시간과 실력이 적합하지 않아서 잘 활용하지 못하고 있다.
+  서비스 출시 전 test용 DB로 사용하기 좋다. 하지만 아직 TDD를 적용하기엔 시간과 실력이 부족해 잘 활용하지 못하고 있다.
 
 ## DB구성
 
 - User
 
-  ID(PK), UserName, UserEmail, UserID, UserPassword, UserProfileImage(예정), UserIntro, Set<User> followers, Set<User> following;
-
-- Article
-
-  ID(PK), ArticleName, UserName, ArticlePlace, ArticlePicture,   
-
-- Heart
-
-  ID(PK), Article.ID, User.ID
-
-- Follow Relation
+- Follow/Following Relation(ManyToMany)
   - follower
-
-    @ManyToMany(cascade = CascadeType.**ALL**)
-
-    @JoinTable(name = "USER_RELATIONS", joinColumns = @JoinColumn(name = "FOLLOWED_ID"), inverseJoinColumns = @JoinColumn(name = "FOLLOWER_ID"))
-
   - following
 
-    @ManyToMany(mappedBy = "followers")
+- Like Relation(ManyToMany , user와post관계)
+	
+- Post(Comment와 ManyToOne)
 
-- ProfileImage
+- Comment 
+  
+- Question(Answer와 ManyToOne)
 
-  ID(PK), ImageName, User.ID
+- Answer
+
 
 ## 메인 페이지 기능 / 디자인
 
@@ -97,7 +84,8 @@
 
 - navigation
   - searchBar (기능 작업 중) ⏳
-    - 회원 목록 리스트, 화면 이동 없이(Ajax)
+    - 회원 목록 리스트, Ajax
+    
   - explore (기능 작업중) ⏳
     - 화면 이동, 상단에 네비, 친구 추천, 게시글 랜덤하게 가져오기
   - heart (기능 작업중) ⏳
@@ -107,7 +95,7 @@
     - 회원 이름, 프로필 편집 버튼, 환경설정(로그아웃, 취소) ✅
     - 게시물 숫자, 팔로워 숫자, 팔로우 숫자 ✅
     - 개인 정보(별명, 자기소개) ✅
-    - 내 게시물 리스트 n * 3열 ⏳
+    
 - Body
   - 게시글  (기능 작업중) ⏳
     - 헤더(프로필사진, 아이디, 장소)
@@ -166,6 +154,8 @@
 <img width="1440" alt="8" src="https://user-images.githubusercontent.com/37807838/45080479-f19d5780-b12f-11e8-83c4-48f31a690fa5.png">
 
 <img width="1440" alt="9" src="https://user-images.githubusercontent.com/37807838/45080484-f3671b00-b12f-11e8-8aec-575ffa3a210c.png">
+
+- 질문에 답변(Ajax) ✅
 
 ## 개인 게시물 작성
 
